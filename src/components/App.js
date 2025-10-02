@@ -1,13 +1,22 @@
+import React, { useState } from "react";
 
-import React from "react";
-import './../styles/App.css';
 
 const App = () => {
+  let obj = {
+    temperature: 25, 
+    conditions: "Sunny" 
+  };
+
+  
   return (
     <div>
-        {/* Do not remove the main div */}
+      <h2>Weather App</h2>
+      <p style = {{color : obj.temperature > 20 ?  "red" : "blue"}}>Temperature: {obj.temperature}°C</p>
+      <p style = {{color: "red"}}>Conditions: {obj.conditions}</p>
+
+      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
